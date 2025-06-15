@@ -1,4 +1,4 @@
-package br.com.app.views.StudentRegister;
+package br.com.app.views.UserRegister;
 
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.datepicker.DatePicker;
@@ -11,9 +11,9 @@ import com.vaadin.flow.router.Route;
 
 @PageTitle("Cadastro")
 @Route("Register")
-public class StudentRegisterView extends VerticalLayout {
+public class UserRegisterView extends VerticalLayout {
 
-    public StudentRegisterView() {
+    public UserRegisterView() {
         setSizeFull();
         setPadding(true);
         setSpacing(true);
