@@ -1,1 +1,8 @@
 @import url('./main-layout.css');
+
+.login {
+  background-color: var(--lumo-contrast-5pct);
+  display: flex;
+  justify-content: center;
+  padding: var(--lumo-space-l);
+}
