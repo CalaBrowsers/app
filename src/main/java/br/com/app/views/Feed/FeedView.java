@@ -87,15 +87,12 @@ public class FeedView extends Div implements AfterNavigationObserver {
             .set("word-break", "break-word")
             .set("width", "100%");
 
-        // === REACTIONS ===
         HorizontalLayout reactionsLayout = new HorizontalLayout();
         reactionsLayout.setSpacing(true);
         reactionsLayout.setPadding(true);
-
         for (String reactionText : dto.getReactions().keySet()) {
             Button reactionButton = new Button(reactionText + " (" + dto.getReactions().get(reactionText) + ")");
             reactionButton.getStyle().set("font-size", "12px");
-
             reactionButton.addClickListener(e -> {
                 dto.react(reactionText);
                 reactionButton.setText(reactionText + " (" + dto.getReactions().get(reactionText) + ")");

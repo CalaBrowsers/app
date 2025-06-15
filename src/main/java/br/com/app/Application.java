@@ -22,7 +22,6 @@ public class Application implements AppShellConfigurator {
     public static void main(String[] args) {
 
         Dotenv dotenv = Dotenv.load();
-		// Define as variáveis do .env como propriedades do sistema
 		dotenv.entries().forEach(entry -> System.setProperty(entry.getKey(), entry.getValue()));
 
         SpringApplication.run(Application.class, args);

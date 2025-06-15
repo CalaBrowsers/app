@@ -13,45 +13,52 @@ import com.vaadin.flow.router.Route;
 @Route("Register")
 public class UserRegisterView extends VerticalLayout {
 
+    private final FormLayout formLayout;
+    private final TextField nameField;
+    private final TextField emailField;
+    private final TextField cpfField;
+    private final DatePicker birthField;
+    private final Button sendButton;
+    private final VerticalLayout footer;
+
     public UserRegisterView() {
         setSizeFull();
         setPadding(true);
         setSpacing(true);
 
-        FormLayout formLayout = new FormLayout();
-        formLayout.addClassName("form-layout");
-        formLayout.setWidthFull();
-
-        TextField nameField = new TextField();
+        nameField = new TextField();
         nameField.setWidthFull();
         nameField.setClassName("name");
         nameField.setPlaceholder("Digite seu nome");
 
-        TextField emailField = new TextField();
+        emailField = new TextField();
         emailField.setWidthFull();
         emailField.setClassName("email");
         emailField.setPlaceholder("Digite seu email");
 
-        TextField cpfField = new TextField();
+        cpfField = new TextField();
         cpfField.setWidthFull();
         cpfField.setClassName("cpf");
         cpfField.setPlaceholder("Digite seu CPF");
 
-        DatePicker birthField = new DatePicker();
+        birthField = new DatePicker();
         birthField.setWidthFull();
         birthField.setClassName("birth");
         birthField.setPlaceholder("Selecione sua data de nascimento");
 
+        formLayout = new FormLayout();
+        formLayout.addClassName("form-layout");
+        formLayout.setWidthFull();
         formLayout.add(nameField, emailField, cpfField, birthField);
 
-        Button sendButton = new Button("Salvar");
+        sendButton = new Button("Salvar");
         sendButton.setWidthFull();
         sendButton.setClassName("send");
 
-        VerticalLayout footer = new VerticalLayout(sendButton);
+        footer = new VerticalLayout(sendButton);
         footer.setPadding(false);
         footer.setSpacing(false);
-        footer.setWidthFull();
+        footer.setWidth("50%");
         footer.setAlignItems(Alignment.STRETCH);
 
         add(formLayout);
