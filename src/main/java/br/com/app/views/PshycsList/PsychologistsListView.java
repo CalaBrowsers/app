@@ -32,17 +32,17 @@ public class PsychologistsListView extends Composite<VerticalLayout> {
         getContent().add(items);
 
         items.addValueChangeListener(event -> {
-            //
+            UI.getCurrent().navigate("PsychologistProfile");
         });
     }
 
     private void setAvatarItemsSampleData(ListBox<PsychologistListDTO> listBox) {
         List<PsychologistListDTO> data = List.of(
-            new PsychologistListDTO("Aria Bailey", "Endocrinologist"),
-            new PsychologistListDTO("Aaliyah Butler", "Nephrologist"),
-            new PsychologistListDTO("Eleanor Price", "Ophthalmologist"),
+            new PsychologistListDTO("Cristina Maria", "Psicóloga"),
+            new PsychologistListDTO("Aaliyah Butler", "Psicopedagogo"),
+            new PsychologistListDTO("Andressa Campos", "Ophthalmologist"),
             new PsychologistListDTO("Allison Torres", "Allergist"),
-            new PsychologistListDTO("Madeline Lewis", "Gastroenterologist")
+            new PsychologistListDTO("Angelina Souza", "Gastroenterologist")
         );
 
         listBox.setItems(data);

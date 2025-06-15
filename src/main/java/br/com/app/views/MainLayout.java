@@ -7,6 +7,7 @@ import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.Header;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.icon.SvgIcon;
+import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.Scroller;
 import com.vaadin.flow.component.sidenav.SideNav;
 import com.vaadin.flow.component.sidenav.SideNavItem;
@@ -63,6 +64,8 @@ public class MainLayout extends AppLayout {
                 nav.addItem(new SideNavItem(entry.title(), entry.path()));
             }
         });
+
+        nav.addItem(new SideNavItem("Psicólogos", "Psychologists", VaadinIcon.GROUP.create()));
 
         return nav;
     }

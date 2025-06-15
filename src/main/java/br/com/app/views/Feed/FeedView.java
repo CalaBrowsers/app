@@ -57,7 +57,7 @@ public class FeedView extends VerticalLayout implements AfterNavigationObserver 
             String content = postField.getValue();
             if (content != null && !content.trim().isEmpty()) {
                 PostDTO novoPost = createPost(
-                        "https://randomuser.me/api/portraits/lego/2.jpg",
+                        "https://randomuser.me/api/portraits/men/2.jpg",
                         "Você",
                         LocalDate.now().format(DateTimeFormatter.ofPattern("dd MMM yyyy")),
                         content
@@ -149,9 +149,11 @@ public class FeedView extends VerticalLayout implements AfterNavigationObserver 
     @Override
     public void afterNavigation(AfterNavigationEvent event) {
         posts = new ArrayList<>(Arrays.asList(
-                createPost("https://randomuser.me/api/portraits/men/42.jpg", "Sprinklers_waffle", "May 8", "Exemplo de post sem ícones."),
-                createPost("https://randomuser.me/api/portraits/women/42.jpg", "Sibbidi-capuccino", "May 3", "Outro exemplo de conteúdo de post."),
-                createPost("https://randomuser.me/api/portraits/men/24.jpg", "Pink_pie", "May 3", "Post bem longo...".repeat(10))
+                createPost("https://randomuser.me/api/portraits/men/42.jpg", "Sprinklers_waffle", "May 8", "Estou me sentindo meio deprimido..."),
+                createPost("https://randomuser.me/api/portraits/women/42.jpg", "Sibbidi-capuccino", "May 3", "Hoje o dia não foi muito bom."),
+                createPost("https://randomuser.me/api/portraits/men/24.jpg", "Pink_pie", "May 3", "Tudo mau por aqui..."),
+                createPost("https://randomuser.me/api/portraits/women/29.jpg", "Anon_muffin", "May 2", "Hoje o dia foi bom!"),
+                createPost("https://randomuser.me/api/portraits/women/25.jpg", "Blue_cookie", "May 2", "Hoje me chamaram de feio...")
         ));
         grid.setItems(posts);
     }

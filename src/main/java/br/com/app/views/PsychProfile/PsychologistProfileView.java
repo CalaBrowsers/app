@@ -8,6 +8,8 @@ import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
+
+import br.com.app.UTILs.NotificationUtil;
 import com.vaadin.flow.router.Route;
 
 @PageTitle("Perfil do Psicólogo")
@@ -46,7 +48,7 @@ public class PsychologistProfileView extends VerticalLayout {
         name = new H2("Andréia Lima");
         name.getStyle().set("margin", "0");
 
-        specialty = new Span("Psicopedagoga especializada em tal tal tal aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        specialty = new Span("Psicopedagoga especializada em atendimento à adolescentes.");
         specialty.getStyle()
             .set("color", "gray")
             .set("text-align", "center");
@@ -64,6 +66,7 @@ public class PsychologistProfileView extends VerticalLayout {
         button.setWidth("60%");
         button.addClickListener(e -> {
             UI.getCurrent().navigate("https://wa.me/" + "//");
+            NotificationUtil.showInfo("Você será redirecionado a um bate-papo com o psicólogo.");
         });
 
         buttonLayout.add(button);
