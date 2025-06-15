@@ -7,6 +7,7 @@ import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.Header;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.icon.SvgIcon;
+import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.Scroller;
 import com.vaadin.flow.component.sidenav.SideNav;
 import com.vaadin.flow.component.sidenav.SideNavItem;
@@ -43,7 +44,7 @@ public class MainLayout extends AppLayout {
     }
 
     private void addDrawerContent() {
-        Span appName = new Span("app");
+        Span appName = new Span("Elumini");
         appName.addClassNames(LumoUtility.FontWeight.SEMIBOLD, LumoUtility.FontSize.LARGE);
         Header header = new Header(appName);
 
@@ -63,6 +64,8 @@ public class MainLayout extends AppLayout {
                 nav.addItem(new SideNavItem(entry.title(), entry.path()));
             }
         });
+
+        nav.addItem(new SideNavItem("Psicólogos", "Psychologists", VaadinIcon.GROUP.create()));
 
         return nav;
     }
